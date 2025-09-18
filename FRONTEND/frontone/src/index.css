@@ -5,9 +5,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Mobile-first responsive design */
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Mobile responsive styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure proper viewport handling on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Mobile-friendly button styles */
+button, input, select, textarea {
+  font-size: 16px; /* Prevents zoom on iOS */
+  font-family: inherit;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Mobile breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 8px;
+  }
+  
+  body {
+    font-size: 13px;
+  }
 }
