@@ -1,0 +1,270 @@
+.community-browser {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.community-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-btn:hover {
+  color: #667eea;
+}
+
+.browse-communities h2,
+.joined-communities h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.community-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e1e5e9;
+}
+
+.community-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.community-card.joined {
+  cursor: pointer;
+  border-left: 4px solid #667eea;
+}
+
+.community-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.community-header h3 {
+  color: #333;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.community-category {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+  color: #667eea;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #e1e5f0;
+}
+
+.community-description {
+  color: #666;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.community-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.community-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.owner-label {
+  color: #888;
+  font-size: 12px;
+}
+
+.owner-name {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.member-count {
+  color: #666;
+  font-weight: 500;
+}
+
+.community-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.join-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+}
+
+.joined-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.joined-btn:hover {
+  background: #229954;
+}
+
+.join-date {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+  font-style: italic;
+}
+
+.no-communities {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-communities-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-communities p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.browse-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.browse-btn:hover {
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+  font-size: 16px;
+}
+
+.community-viewer {
+  height: 100%;
+}
+
+.community-viewer-header {
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
+}
+
+.community-viewer-header .back-btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.community-viewer-header .back-btn:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .community-browser {
+    padding: 15px;
+  }
+  
+  .communities-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .community-card {
+    padding: 15px;
+  }
+  
+  .community-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .community-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

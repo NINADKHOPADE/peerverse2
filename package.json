@@ -1,0 +1,10 @@
+{
+  "name": "peerverse",
+  "version": "1.0.0",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3",
+    "nodemailer": "^6.9.7"
+  }
+}
